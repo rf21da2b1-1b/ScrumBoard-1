@@ -1,0 +1,16 @@
+﻿@page
+@model ScrumBoard.Pages.UserStories.IndexModel
+@{
+}
+<h1>Dette er UserStories</h1>
+<p>Her Kommer listen</p>
+
+<ul>
+    @foreach (var us in @Model.UserStories)
+    {
+        <li>
+            <div>(@us.Id) @us.Title</div>
+            <div>@us.Description</div>
+            <div>StoryPoint=@us.StoryPoints, BusinessValue=@us.BusinessValue</div></li>
+    }
+</ul>
